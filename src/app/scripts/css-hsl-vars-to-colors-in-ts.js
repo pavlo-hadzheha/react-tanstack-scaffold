@@ -37,7 +37,10 @@ rl.on('line', (line) => {
     const twPropertyName = `tw${camelName.slice(0, 1).toUpperCase()}${camelName.slice(1)}`
 
     fs.appendFileSync(outputFilePath, `  ${camelName}: 'hsl(${value})',\n`)
-    fs.appendFileSync(outputFilePath, `  ${twPropertyName}: 'hsl(var(--${name}) / <alpha-value>)',\n`)
+    fs.appendFileSync(
+      outputFilePath,
+      `  ${twPropertyName}: 'hsl(var(--${name}) / <alpha-value>)',\n`
+    )
   }
 })
 

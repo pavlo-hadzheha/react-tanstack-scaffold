@@ -1,21 +1,22 @@
 import AutoImport from 'unplugin-auto-import/vite'
 
 /* CONFIGURATION FOR SCRIPTS AUTO-IMPORT */
-export const ImportsBuilder = () => AutoImport({
-  dts: './dts/auto-imports.d.ts',
+export const ImportsBuilder = () =>
+  AutoImport({
+    dts: './dts/auto-imports.d.ts',
 
-  dirs: [],
+    dirs: [],
 
-  eslintrc: {
-    enabled: true
-  },
+    eslintrc: {
+      enabled: true,
+    },
 
-  imports: [
-    'react',
-    {
-      'react-dom': ['createPortal'],
-      react: ['createContext', 'Fragment'],
-    }
-  ],
-  resolvers: []
-})
+    imports: [
+      'react',
+      {
+        'react-dom': ['createPortal'],
+        react: ['createContext', 'Fragment'],
+      },
+    ],
+    resolvers: [],
+  })

@@ -1,13 +1,13 @@
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
-import { TanStackRouterVite } from "@tanstack/router-plugin/vite";
-import { ImportsBuilder } from "./vite.imports";
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react-swc'
+import { TanStackRouterVite } from '@tanstack/router-plugin/vite'
+import { ImportsBuilder } from './vite.imports'
 
-// https://vitejs.dev/config/
+// https://vite.dev/config/
 export default defineConfig({
   plugins: [
     TanStackRouterVite({
-      routesDirectory: "./src/pages",
+      routesDirectory: './src/pages',
     }),
     react(),
     ImportsBuilder(),
@@ -20,8 +20,8 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        api: "modern-compiler", // or "modern"
+        api: 'modern-compiler', // or "modern"
       },
     },
   },
-});
+})

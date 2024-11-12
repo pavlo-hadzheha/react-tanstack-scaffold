@@ -4,35 +4,44 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "typecheck": "tsc --noEmit",
     "dev": "vite",
-    "build": "vite build",
-    "serve": "vite preview",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "lint": "eslint .",
+    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
     "type-check": "npx tsc --noEmit",
-    "start": "vite",
     "generate-colors-ts": "node ./src/app/scripts/css-hsl-vars-to-colors-in-ts.js ./src/app/styles/colors.scss ./src/app/styles/tailwind/app.colors.ts"
   },
   "dependencies": {
     "@tanstack/react-query": "^5.59.20",
     "@tanstack/react-query-devtools": "^5.59.20",
-    "@tanstack/react-router": "^1.81.1",
-    "@tanstack/router-devtools": "^1.81.1",
+    "@tanstack/react-router": "^1.81.4",
+    "@tanstack/router-devtools": "^1.81.4",
     "antd": "^5.22.0",
     "clsx": "^2.1.1",
     "dayjs": "^1.11.13",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "tailwind-merge": "^2.5.4",
-    "unplugin-auto-import": "^0.18.3"
+    "tailwind-merge": "^2.5.4"
   },
   "devDependencies": {
+    "@eslint/js": "^9.13.0",
     "@tanstack/router-plugin": "^1.79.0",
-    "@types/react": "^18.3.3",
-    "@types/react-dom": "^18.3.0",
-    "@vitejs/plugin-react": "^4.3.2",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react-swc": "^3.5.0",
     "autoprefixer": "^10.4.20",
+    "eslint": "^9.13.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-react-refresh": "^0.4.14",
+    "globals": "^15.11.0",
     "postcss": "^8.4.49",
+    "prettier": "3.3.3",
     "tailwindcss": "^3.4.14",
-    "vite": "^5.4.8"
+    "typescript": "~5.6.2",
+    "typescript-eslint": "^8.11.0",
+    "unplugin-auto-import": "^0.18.3",
+    "vite": "^5.4.10"
   }
 }
