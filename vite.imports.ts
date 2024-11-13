@@ -1,4 +1,5 @@
 import AutoImport from 'unplugin-auto-import/vite'
+import { AppIconsResolver, LucideIconsResolver } from './vite.icons'
 
 /* CONFIGURATION FOR SCRIPTS AUTO-IMPORT */
 export const ImportsBuilder = () =>
@@ -18,5 +19,5 @@ export const ImportsBuilder = () =>
         react: ['createContext', 'Fragment'],
       },
     ],
-    resolvers: [],
+    resolvers: [AppIconsResolver(), LucideIconsResolver],
   })

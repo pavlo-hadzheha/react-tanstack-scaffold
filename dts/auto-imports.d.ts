@@ -6,7 +6,22 @@
 // biome-ignore lint: disable
 export {}
 declare global {
+  const AppIconFootprints: typeof import('~icons/icon/footprints.jsx')['default']
+  const AppIconLogo: typeof import('~icons/icon/logo.jsx')['default']
   const Fragment: typeof import('react')['Fragment']
+  const LIcon: typeof import('lucide-react')['']
+  const LIconChartPie: typeof import('lucide-react')['ChartPie']
+  const LIconFolders: typeof import('lucide-react')['Folders']
+  const LIconGripVertical: typeof import('lucide-react')['GripVertical']
+  const LIconHouse: typeof import('lucide-react')['House']
+  const LIconInbox: typeof import('lucide-react')['Inbox']
+  const LIconKanban: typeof import('lucide-react')['Kanban']
+  const LIconLogIn: typeof import('lucide-react')['LogIn']
+  const LIconSearch: typeof import('lucide-react')['Search']
+  const LIconSettings: typeof import('lucide-react')['Settings']
+  const LIconShoppingBag: typeof import('lucide-react')['ShoppingBag']
+  const LIconUserRoundPen: typeof import('lucide-react')['UserRoundPen']
+  const LIconUsers: typeof import('lucide-react')['Users']
   const createContext: typeof import('react')['createContext']
   const createPortal: typeof import('react-dom')['createPortal']
   const createRef: typeof import('react')['createRef']

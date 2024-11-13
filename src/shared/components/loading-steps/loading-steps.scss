@@ -1,0 +1,24 @@
+@keyframes animate-steps {
+  from {
+    rotate: 360deg;
+  }
+
+  to {
+    rotate: 0deg;
+  }
+}
+
+.loading-steps {
+  @apply relative w-[180px] h-[180px] flex items-center justify-center rounded-full bg-slate-700;
+  box-shadow: 0 0 20px theme('colors.slate.700');
+}
+
+.loading-steps__item {
+  @apply absolute fill-gray-100/15;
+  animation: animate-steps 5s steps(16) infinite;
+}
+
+.loading-steps__item:first-of-type {
+  fill: white;
+  filter: drop-shadow(0 0 7px #fff);
+}

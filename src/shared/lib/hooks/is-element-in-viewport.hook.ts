@@ -6,9 +6,12 @@ export const useIsElementInViewport = <T extends TOptional<HTMLElement>>() => {
   const [isElementInViewport, setIsElementInViewport] = useState(false)
 
   const setRef = useCallback((node: T) => {
-    const observer = new IntersectionObserver(([entry]) => setIsElementInViewport(entry.isIntersecting), {
-      root: document.body,
-    })
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsElementInViewport(entry.isIntersecting),
+      {
+        root: document.body,
+      }
+    )
     if (ref.current) {
       observer.unobserve(ref.current)
     }

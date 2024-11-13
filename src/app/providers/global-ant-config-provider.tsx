@@ -6,7 +6,7 @@ export const GlobalAntConfigProvider = ({ children }: TChildrenProps) => {
     <ConfigProvider
       theme={{
         token: {
-          fontFamily: '',
+          fontFamily: 'Quicksand, sans-serif',
           colorPrimary: appColors.primary,
         },
       }}

@@ -22,6 +22,21 @@
     "useRef": true,
     "useState": true,
     "useSyncExternalStore": true,
-    "useTransition": true
+    "useTransition": true,
+    "AppIconFootprints": true,
+    "AppIconLogo": true,
+    "LIconSearch": true,
+    "LIconHouse": true,
+    "LIconChartPie": true,
+    "LIconFolders": true,
+    "LIcon": true,
+    "LIconSettings": true,
+    "LIconKanban": true,
+    "LIconInbox": true,
+    "LIconUsers": true,
+    "LIconShoppingBag": true,
+    "LIconLogIn": true,
+    "LIconUserRoundPen": true,
+    "LIconGripVertical": true
   }
 }
